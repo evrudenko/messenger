@@ -15,6 +15,9 @@ uvicorn = "*"
 gunicorn = "*"
 uvloop = "*"
 httptools = "*"
+psycopg2-binary = "*"
+dj-database-url = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"

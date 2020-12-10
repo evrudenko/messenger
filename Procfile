@@ -1,0 +1,1 @@
+web: gunicorn messenger.asgi:application -k uvicorn.workers.UvicornWorker -w 4
