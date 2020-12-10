@@ -1,3 +1,4 @@
+ССылка на работающий проект https://sleepy-waters-05131.herokuapp.com/
 # API Reference
 
 Аутентификация реализована с использованием [JWT](https://jpadilla.github.io/django-rest-framework-jwt/),
