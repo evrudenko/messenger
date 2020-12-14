@@ -51,6 +51,7 @@ class UserSerializerWithToken(serializers.ModelSerializer):
 
 
 class UserContactsSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(required=True)
     username = serializers.CharField(read_only=True)
     avatar = serializers.ImageField(read_only=True)
     last_message_text = serializers.SerializerMethodField()
