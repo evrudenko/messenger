@@ -57,7 +57,7 @@ class UserContactsSerializer(serializers.ModelSerializer):
 
     def get_last_message_text(self, obj):
         message_class = apps.get_model('message', 'Message')
-        last_message = message_class.objects.filter(Q(sender=obj) | Q(recipient=obj)).last()
+        last_message = message_class.objects.filter(Q(sender=obj) | Q(recipient=obj), deleted=False).last()
         if last_message:
             return last_message.text
         return None
@@ -68,5 +68,5 @@ class UserContactsSerializer(serializers.ModelSerializer):
             'id',
             'username',
             'avatar',
-            'last_message_text'
+            'last_message_text',
         )
