@@ -49,7 +49,8 @@
     - uri="users/contacts/"
     - method=GET
     - response_format=JSON
-    - response_fields={{"id1", "username1", "avatar1"}, {"id2", "username2", "avatar2"}, ...}
+    - response_fields={{"id1", "username1", "avatar1", "last_message_text1"},
+    {"id2", "username2", "avatar2", "last_message_text2"}, ...}
     
 7. Добавление пользователя в контакты
     - uri="users/contacts/"
