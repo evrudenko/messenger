@@ -69,7 +69,8 @@ class UserContactsView(APIView):
         user.contacts.remove(contact)
         message_class = apps.get_model('message', 'Message')
         users_messages = message_class.objects.select_for_update().filter((Q(sender=user) & Q(recipient=contact)) |
-                                                                          (Q(sender=contact) & Q(recipient=user)))
+                                                                          (Q(sender=contact) & Q(recipient=user)),
+                                                                          deleted=False)
         with transaction.atomic():
             users_messages.update(deleted=True)
         return Response({'success': '{} does not contact {}'.format(user.username, contact.username)},
