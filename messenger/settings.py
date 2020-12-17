@@ -72,6 +72,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = (
+    'http://localhost:3000',
     'https://chat-app1-d20f1.web.app/',
 )
 
