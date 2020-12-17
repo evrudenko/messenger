@@ -1,9 +1,9 @@
-ССылка на работающий проект https://sleepy-waters-05131.herokuapp.com/
+Ссылка на работающий проект https://sleepy-waters-05131.herokuapp.com/
 # API Reference
 
 Аутентификация реализована с использованием [JWT](https://jpadilla.github.io/django-rest-framework-jwt/),
 для аутентификации пользователя в каждый запрос необходимо вставлять заголовок с именем "Authorization"
-и значением "JWT <token>".
+и значением "JWT \<token\>".
 
 ## Users
 
